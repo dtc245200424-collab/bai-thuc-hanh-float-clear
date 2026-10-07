@@ -1,0 +1,31 @@
+/* Reset CSS và thiết lập box-sizing chung để padding không làm tăng kích thước thực tế của cột */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+}
+
+.left-column {
+  width: 60%;
+  float: left;
+  background-color: lightblue;
+  padding: 20px;
+}
+
+.right-column {
+  width: 38%;
+  float: right;
+  background-color: lightgreen;
+  padding: 20px;
+}
+
+/* Kỹ thuật Clearfix giúp container ôm trọn các phần tử con dùng float */
+.container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
